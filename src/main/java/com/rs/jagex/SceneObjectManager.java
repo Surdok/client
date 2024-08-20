@@ -135,12 +135,12 @@ public class SceneObjectManager {
 		return intensities != null ? intensities[x][y] & 0xff : 0;
 	}
 
-	public GraphNode_Sub1_Sub1 getInteractableObject(int i_1, int i_2, int i_3, Interface25 interface25_4) {
-		Class293 class293_6 = aClass293ArrayArrayArray2604[i_1][i_2][i_3];
+	public GraphNode_Sub1_Sub1 getInteractableObject(int plane, int x, int y, Interface25 interface25_4) {
+		Class293 class293_6 = aClass293ArrayArrayArray2604[plane][x][y];
 		if (class293_6 != null)
 			for (Class208 class208_7 = class293_6.aClass208_3504; class208_7 != null; class208_7 = class208_7.aClass208_2660) {
 				GraphNode_Sub1_Sub1 class521_sub1_sub1_8 = class208_7.aTransform_Sub1_Sub1_2659;
-				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8)) && i_2 == class521_sub1_sub1_8.aShort9458 && i_3 == class521_sub1_sub1_8.aShort9456)
+				if ((interface25_4 == null || interface25_4.method183(class521_sub1_sub1_8)) && x == class521_sub1_sub1_8.aShort9458 && y == class521_sub1_sub1_8.aShort9456)
 					return class521_sub1_sub1_8;
 			}
 		return null;
@@ -150,18 +150,18 @@ public class SceneObjectManager {
 		return scales != null ? scales[i_1][i_2] & 0xffff : 0;
 	}
 
-	public GraphNode_Sub1_Sub5 getWall(int i_1, int i_2, int i_3) {
-		Class293 class293_5 = aClass293ArrayArrayArray2604[i_1][i_2][i_3];
+	public GraphNode_Sub1_Sub5 getWall(int plane, int x, int y) {
+		Class293 class293_5 = aClass293ArrayArrayArray2604[plane][x][y];
 		return class293_5 == null ? null : class293_5.aTransform_Sub1_Sub5_3505;
 	}
 
-	public GraphNode_Sub1_Sub5 getWall2(int i_1, int i_2, int i_3) {
-		Class293 class293_5 = aClass293ArrayArrayArray2604[i_1][i_2][i_3];
+	public GraphNode_Sub1_Sub5 getWall2(int plane, int x, int y) {
+		Class293 class293_5 = aClass293ArrayArrayArray2604[plane][x][y];
 		return class293_5 == null ? null : class293_5.aTransform_Sub1_Sub5_3502;
 	}
 
-	public GraphNode_Sub1_Sub4 getWallDecoration(int i_1, int i_2, int i_3) {
-		Class293 class293_5 = aClass293ArrayArrayArray2604[i_1][i_2][i_3];
+	public GraphNode_Sub1_Sub4 getWallDecoration(int plane, int x, int y) {
+		Class293 class293_5 = aClass293ArrayArrayArray2604[plane][x][y];
 		return class293_5 == null ? null : class293_5.aTransform_Sub1_Sub4_3503;
 	}
 

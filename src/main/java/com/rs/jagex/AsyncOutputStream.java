@@ -57,9 +57,9 @@ public class AsyncOutputStream implements Runnable {
 			int i_17 = -16777216 | 238 + (int) (Math.random() * 20.0D) - 10 << 16;
 			int i_18 = (int) (Math.random() * 8.0D) << 16 | (int) (Math.random() * 8.0D) << 8 | (int) (Math.random() * 8.0D);
 			boolean[][] bools_19 = new boolean[i_7 + 1 + 2][i_7 + 1 + 2];
-			int i_21;
-			int i_22;
-			int i_23;
+			int x;
+			int y;
+			int plane;
 			int i_24;
 			int i_25;
 			int i_26;
@@ -71,29 +71,29 @@ public class AsyncOutputStream implements Runnable {
 			int i_33;
 			int i_34;
 			for (int i_20 = b_8; i_20 < b_8 + i_3; i_20 += i_7)
-				for (i_21 = b_9; i_21 < i_4 + b_9; i_21 += i_7) {
-					i_22 = b_49;
-					i_23 = b_15;
+				for (x = b_9; x < i_4 + b_9; x += i_7) {
+					y = b_49;
+					plane = b_15;
 					i_24 = i_20;
 					if (i_20 > 0) {
 						i_24 = i_20 - 1;
-						i_22 = b_49 + 4;
+						y = b_49 + 4;
 					}
-					i_25 = i_21;
-					if (i_21 > 0)
-						i_25 = i_21 - 1;
+					i_25 = x;
+					if (x > 0)
+						i_25 = x - 1;
 					i_26 = i_7 + i_20;
 					if (i_26 < i_3)
 						++i_26;
-					i_27 = i_7 + i_21;
+					i_27 = i_7 + x;
 					if (i_27 < i_4) {
 						++i_27;
-						i_23 = b_15 + 4;
+						plane = b_15 + 4;
 					}
 					if (Class187.aBool2358)
 						graphicalrenderer_0.L();
 					else
-						graphicalrenderer_0.r(0, 0, i_22 + i_7 * 4, i_23 + i_7 * 4);
+						graphicalrenderer_0.r(0, 0, y + i_7 * 4, plane + i_7 * 4);
 					graphicalrenderer_0.ba(3, -16777216);
 					i_28 = Math.min(i_7, i_3 - 1);
 					int i_30;
@@ -106,13 +106,13 @@ public class AsyncOutputStream implements Runnable {
 							for (i_30 = -4; i_30 < i_7; i_30++)
 								for (i_31 = -4; i_31 < i_7; i_31++) {
 									i_32 = i_20 + i_30;
-									i_33 = i_21 + i_31;
+									i_33 = x + i_31;
 									if (i_32 >= b_8 && i_33 >= b_9 && regionmap_5.method5498(i_1, i_29, i_32, i_33)) {
 										i_34 = i_29;
 										if (regionmap_5.isLowerObjectsToOverrideClipping(i_32, i_33))
 											i_34 = i_29 - 1;
 										if (i_34 >= 0)
-											Static.method13042(graphicalrenderer_0, i_34, i_32, i_33, i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, i_37, i_17);
+											Static.method13042(graphicalrenderer_0, i_34, i_32, i_33, y + i_30 * 4, (i_7 - i_31) * 4 + plane - 4, i_37, i_17);
 									}
 								}
 					}
@@ -121,23 +121,23 @@ public class AsyncOutputStream implements Runnable {
 						for (i_30 = 0; i_30 < i_7; i_30++)
 							for (i_31 = 0; i_31 < i_7; i_31++) {
 								i_32 = i_20 + i_30;
-								i_33 = i_21 + i_31;
+								i_33 = x + i_31;
 								i_34 = clipmap_38.map[i_32 - clipmap_38.offsetX][i_33 - clipmap_38.offsetY];
 								if (!ClipFlagMap.notFlagged(i_34, ClipFlag.BLOCKED_DECO, ClipFlag.BLOCKED, ClipFlag.ALT_OBJ))
-									graphicalrenderer_0.method8425(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, 4, -1713569622);
+									graphicalrenderer_0.method8425(y + i_30 * 4, (i_7 - i_31) * 4 + plane - 4, 4, 4, -1713569622);
 								else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.N_ALT_OBJ))
-									graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
+									graphicalrenderer_0.method8659(y + i_30 * 4, (i_7 - i_31) * 4 + plane - 4, 4, -1713569622);
 								else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.E_ALT_OBJ))
-									graphicalrenderer_0.method8428(i_22 + i_30 * 4 + 3, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
+									graphicalrenderer_0.method8428(y + i_30 * 4 + 3, (i_7 - i_31) * 4 + plane - 4, 4, -1713569622);
 								else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.S_ALT_OBJ))
-									graphicalrenderer_0.method8659(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4 + 3, 4, -1713569622);
+									graphicalrenderer_0.method8659(y + i_30 * 4, (i_7 - i_31) * 4 + plane - 4 + 3, 4, -1713569622);
 								else if (!ClipFlagMap.notFlagged(i_34, ClipFlag.W_ALT_OBJ))
-									graphicalrenderer_0.method8428(i_22 + i_30 * 4, (i_7 - i_31) * 4 + i_23 - 4, 4, -1713569622);
+									graphicalrenderer_0.method8428(y + i_30 * 4, (i_7 - i_31) * 4 + plane - 4, 4, -1713569622);
 							}
 					}
-					graphicalrenderer_0.B(i_22, i_23, i_7 * 4, i_7 * 4, i_18, 2);
+					graphicalrenderer_0.B(y, plane, i_7 * 4, i_7 * 4, i_18, 2);
 					if (!Class187.aBool2352) {
-						CursorDefintions.aNativeSprite_5004.method2750((i_20 - b_8) * 4 + 48, i_4 * 4 + 48 - (i_21 - b_9) * 4 - i_7 * 4, i_7 * 4, i_7 * 4, i_22, i_23);
+						CursorDefintions.aNativeSprite_5004.method2750((i_20 - b_8) * 4 + 48, i_4 * 4 + 48 - (x - b_9) * 4 - i_7 * 4, i_7 * 4, i_7 * 4, y, plane);
 						if (Class187.aBool2358) {
 							CursorDefintions.aNativeSprite_5004.method2752(256, 0);
 							try {
@@ -166,17 +166,17 @@ public class AsyncOutputStream implements Runnable {
 			Class187.anInt2353 = 0;
 			Class187.aClass482_2350.removeAll();
 			if (!Class187.aBool2356) {
-				for (i_21 = b_8; i_21 < b_8 + i_3; i_21++)
-					for (i_22 = b_9; i_22 < i_4 + b_9; i_22++)
-						for (i_23 = i_1; i_23 <= i_1 + 1 && i_23 <= 3; i_23++)
-							if (regionmap_5.method5498(i_1, i_23, i_21, i_22)) {
-								WorldObject sceneobject_40 = (WorldObject) sceneobjectmanager_6.getGroundDecoration(i_23, i_21, i_22);
+				for (x = b_8; x < b_8 + i_3; x++)
+					for (y = b_9; y < i_4 + b_9; y++)
+						for (plane = i_1; plane <= i_1 + 1 && plane <= 3; plane++)
+							if (regionmap_5.method5498(i_1, plane, x, y)) {
+								WorldObject sceneobject_40 = (WorldObject) sceneobjectmanager_6.getGroundDecoration(plane, x, y);
 								if (sceneobject_40 == null)
-									sceneobject_40 = (WorldObject) sceneobjectmanager_6.getInteractableObject(i_23, i_21, i_22, client.anInterface25_7446);
+									sceneobject_40 = (WorldObject) sceneobjectmanager_6.getInteractableObject(plane, x, y, client.anInterface25_7446);
 								if (sceneobject_40 == null)
-									sceneobject_40 = (WorldObject) sceneobjectmanager_6.getWall(i_23, i_21, i_22);
+									sceneobject_40 = (WorldObject) sceneobjectmanager_6.getWall(plane, x, y);
 								if (sceneobject_40 == null)
-									sceneobject_40 = (WorldObject) sceneobjectmanager_6.getWallDecoration(i_23, i_21, i_22);
+									sceneobject_40 = (WorldObject) sceneobjectmanager_6.getWallDecoration(plane, x, y);
 								if (sceneobject_40 != null) {
 									ObjectDefinition objectdefinitions_41 = objectindexloader_39.getObjectDefs(sceneobject_40.getId());
 									if (!objectdefinitions_41.members || client.membersWorld) {
@@ -195,21 +195,21 @@ public class AsyncOutputStream implements Runnable {
 												if (worldmapareadefs_51 != null && worldmapareadefs_51.aBool2730)
 													bool_50 = true;
 											}
-											i_28 = i_21;
-											i_29 = i_22;
+											i_28 = x;
+											i_29 = y;
 											if (bool_50) {
-												int[][] ints_43 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23).map;
-												i_31 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23).offsetX;
-												i_32 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i_23).offsetY;
+												int[][] ints_43 = IndexLoaders.MAP_REGION_DECODER.getClipMap(plane).map;
+												i_31 = IndexLoaders.MAP_REGION_DECODER.getClipMap(plane).offsetX;
+												i_32 = IndexLoaders.MAP_REGION_DECODER.getClipMap(plane).offsetY;
 												for (i_33 = 0; i_33 < 10; i_33++) {
 													i_34 = (int) (Math.random() * 4.0D);
-													if (i_34 == 0 && i_28 > b_8 && i_28 > i_21 - 3 && (ints_43[i_28 - 1 - i_31][i_29 - i_32] & 0x2c0108) == 0)
+													if (i_34 == 0 && i_28 > b_8 && i_28 > x - 3 && (ints_43[i_28 - 1 - i_31][i_29 - i_32] & 0x2c0108) == 0)
 														--i_28;
-													if (i_34 == 1 && i_28 < b_8 + i_3 - 1 && i_28 < i_21 + 3 && (ints_43[i_28 + 1 - i_31][i_29 - i_32] & 0x2c0180) == 0)
+													if (i_34 == 1 && i_28 < b_8 + i_3 - 1 && i_28 < x + 3 && (ints_43[i_28 + 1 - i_31][i_29 - i_32] & 0x2c0180) == 0)
 														++i_28;
-													if (i_34 == 2 && i_29 > b_9 && i_29 > i_22 - 3 && (ints_43[i_28 - i_31][i_29 - 1 - i_32] & 0x2c0102) == 0)
+													if (i_34 == 2 && i_29 > b_9 && i_29 > y - 3 && (ints_43[i_28 - i_31][i_29 - 1 - i_32] & 0x2c0102) == 0)
 														--i_29;
-													if (i_34 == 3 && i_29 < b_9 + i_4 - 1 && i_29 < i_22 + 3 && (ints_43[i_28 - i_31][i_29 + 1 - i_32] & 0x2c0120) == 0)
+													if (i_34 == 3 && i_29 < b_9 + i_4 - 1 && i_29 < y + 3 && (ints_43[i_28 - i_31][i_29 + 1 - i_32] & 0x2c0120) == 0)
 														++i_29;
 												}
 											}
@@ -225,17 +225,17 @@ public class AsyncOutputStream implements Runnable {
 				if (class283_44 != null) {
 					IndexLoaders.WORLD_MAP_LOADER.method3697(1024, 64);
 					CoordGrid coordgrid_45 = IndexLoaders.MAP_REGION_DECODER.getBase();
-					for (i_23 = 0; i_23 < class283_44.size; i_23++) {
-						i_24 = class283_44.regionHashes[i_23];
+					for (plane = 0; plane < class283_44.size; plane++) {
+						i_24 = class283_44.regionHashes[plane];
 						if (i_24 >> 28 == VertexNormal.MY_PLAYER.plane) {
 							i_25 = (i_24 >> 14 & 0x3fff) - coordgrid_45.x;
 							i_26 = (i_24 & 0x3fff) - coordgrid_45.y;
 							if (i_25 >= 0 && i_25 < i_3 && i_26 >= 0 && i_26 < i_4)
-								Class187.aClass482_2350.append(new IntNode(i_23));
+								Class187.aClass482_2350.append(new IntNode(plane));
 							else {
-								MapAreaDefinitions worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.areaIds[i_23]);
+								MapAreaDefinitions worldmapareadefs_46 = IndexLoaders.WORLD_MAP_LOADER.getWorldMapDefs(class283_44.areaIds[plane]);
 								if (worldmapareadefs_46.anIntArray2717 != null && i_25 + worldmapareadefs_46.anInt2731 >= 0 && i_25 + worldmapareadefs_46.anInt2747 < i_3 && i_26 + worldmapareadefs_46.anInt2746 >= 0 && i_26 + worldmapareadefs_46.anInt2744 < i_4)
-									Class187.aClass482_2350.append(new IntNode(i_23));
+									Class187.aClass482_2350.append(new IntNode(plane));
 							}
 						}
 					}

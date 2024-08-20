@@ -49,21 +49,21 @@ public class LocationIndexLoader {
 			defaultOptions = new String[6];
 	}
 
-	public ObjectDefinition getObjectDefs(int i_1) {
+	public ObjectDefinition getObjectDefs(int id) {
 		LRUCache softcache_4 = LRUCache;
 		ObjectDefinition objectdefinitions_3;
 		synchronized (LRUCache) {
-			objectdefinitions_3 = (ObjectDefinition) LRUCache.get(i_1);
+			objectdefinitions_3 = (ObjectDefinition) LRUCache.get(id);
 		}
 		if (objectdefinitions_3 != null)
 			return objectdefinitions_3;
 		Index index_5 = locationIndex;
 		byte[] bytes_9;
 		synchronized (locationIndex) {
-			bytes_9 = locationIndex.getFile(SharedConfigsType.OBJECTS.containerId(i_1), SharedConfigsType.OBJECTS.fileId(i_1));
+			bytes_9 = locationIndex.getFile(SharedConfigsType.OBJECTS.containerId(id), SharedConfigsType.OBJECTS.fileId(id));
 		}
 		objectdefinitions_3 = new ObjectDefinition();
-		objectdefinitions_3.id = i_1;
+		objectdefinitions_3.id = id;
 		objectdefinitions_3.loader = this;
 		objectdefinitions_3.options = defaultOptions.clone();
 		if (bytes_9 != null)
@@ -79,7 +79,7 @@ public class LocationIndexLoader {
 		}
 		LRUCache softcache_10 = LRUCache;
 		synchronized (LRUCache) {
-			LRUCache.put(objectdefinitions_3, i_1);
+			LRUCache.put(objectdefinitions_3, id);
 			return objectdefinitions_3;
 		}
 	}
