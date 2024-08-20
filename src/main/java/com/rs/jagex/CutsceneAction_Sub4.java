@@ -2,7 +2,7 @@ package com.rs.jagex;
 
 public class CutsceneAction_Sub4 extends CutsceneAction {
 
-	static void method13789(MenuActionEvent event, int i_1, int i_2, int i_3) {
+	static void OnClientAction(MenuActionEvent event, int i_1, int i_2, int i_3) {
 		if (event != null && Class20.aClass482_171.tail != event) {
 			int i_4 = event.anInt9581;
 			int i_5 = event.anInt9582;
