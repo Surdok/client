@@ -9,7 +9,7 @@ public abstract class Class158_Sub1 extends Class158 {
 	}
 
 	public static String method13768(MenuActionEvent class282_sub50_sub7_0) {
-		return !Class20.aBool161 && class282_sub50_sub7_0 != null ? class282_sub50_sub7_0.aString9576 : "";
+		return !Class20.aBool161 && class282_sub50_sub7_0 != null ? class282_sub50_sub7_0.actionName : "";
 	}
 
 	public abstract void method13759(int var1, Interface9 var2);

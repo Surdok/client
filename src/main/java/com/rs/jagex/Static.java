@@ -215,7 +215,7 @@ public class Static {
 	}
 
 	static void method4653(int i_0, int i_1) {
-		if (QuickchatFiller.ENTITY_DEFAULTS.aBool7044 || Class20.anInt169 != 1 && (!CutsceneAction_Sub6.SHOW_FACE_HERE || Class20.anInt169 != 2 || !AccountCreationStage.aCacheableNode_Sub7_12.aString9576.equals(LocalizedText.FACE_HERE.translate(Class223.CURRENT_LANGUAGE)))) {
+		if (QuickchatFiller.ENTITY_DEFAULTS.aBool7044 || Class20.anInt169 != 1 && (!CutsceneAction_Sub6.SHOW_FACE_HERE || Class20.anInt169 != 2 || !AccountCreationStage.aCacheableNode_Sub7_12.actionName.equals(LocalizedText.FACE_HERE.translate(Class223.CURRENT_LANGUAGE)))) {
 			FontMetrics fontmetrics_3 = ShaderLoader.method1887();
 			int i_4 = fontmetrics_3.getWidthNoSprites(LocalizedText.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE));
 			int i_5;
@@ -307,7 +307,7 @@ public class Static {
 	}
 
 	static String method6380(MenuActionEvent class282_sub50_sub7_0) {
-		return class282_sub50_sub7_0.aString9585 != null && !class282_sub50_sub7_0.aString9585.isEmpty() ? (class282_sub50_sub7_0.aString9588 != null && !class282_sub50_sub7_0.aString9588.isEmpty() ? class282_sub50_sub7_0.aString9576 + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9588 + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9585 : class282_sub50_sub7_0.aString9576 + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9585) : (class282_sub50_sub7_0.aString9588 != null && !class282_sub50_sub7_0.aString9588.isEmpty() ? class282_sub50_sub7_0.aString9576 + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9588 : class282_sub50_sub7_0.aString9576);
+		return class282_sub50_sub7_0.aString9585 != null && !class282_sub50_sub7_0.aString9585.isEmpty() ? (class282_sub50_sub7_0.aString9588 != null && !class282_sub50_sub7_0.aString9588.isEmpty() ? class282_sub50_sub7_0.actionName + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9588 + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9585 : class282_sub50_sub7_0.actionName + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9585) : (class282_sub50_sub7_0.aString9588 != null && !class282_sub50_sub7_0.aString9588.isEmpty() ? class282_sub50_sub7_0.actionName + LocalizedText.aClass433_5315.translate(Class223.CURRENT_LANGUAGE) + class282_sub50_sub7_0.aString9588 : class282_sub50_sub7_0.actionName);
 	}
 
 	public static void method6775(int i_0, int i_1, int i_2, int i_3, ObjectDefinition objectdefinitions_4, NPCEntity npc_5, PlayerEntity player_6) {

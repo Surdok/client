@@ -4,7 +4,7 @@ public class MenuActionEvent extends CacheableNode {
 
 	String aString9585;
 	String aString9588;
-	String aString9576;
+	String actionName;
 	int anInt9578;
 	MenuAction menuAction;
 	int itemId;
@@ -18,7 +18,7 @@ public class MenuActionEvent extends CacheableNode {
 
 	MenuActionEvent(String string_1, String string_2, int i_3, MenuAction i_4, int i_5, long long_6, int i_8, int i_9, boolean bool_10, boolean bool_11, long long_12, boolean bool_14) {
 		aString9588 = string_2;
-		aString9576 = string_1;
+		actionName = string_1;
 		anInt9578 = i_3;
 		menuAction = i_4;
 		itemId = i_5;
