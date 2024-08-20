@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "java (buildArtifact)",
+      "mainClass": "com.rs.Loader",
+      "targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+      "elements": ["${compileOutput}", "${dependencies}"],
+      "problemMatcher": [],
+      "label": "java (buildArtifact): DarkanClient",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

@@ -17,8 +17,8 @@ public class Class9 {
 	static int anInt76 = -1;
 	static long aLong77 = -1L;
 	static long aLong86;
-	static String aString99 = "";
-	static String aString102 = "";
+	static String Username = "";
+	static String Password = "";
 	static int anInt90;
 	static int anInt104;
 	static boolean aBool71;

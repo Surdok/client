@@ -59,7 +59,7 @@ public class Class78 {
 		else if (Class9.anInt76 != -1)
 			Class14.method537();
 		else
-			ParticleArchive1Def.worldLogin(Class9.aString99, Class9.aString102);
+			ParticleArchive1Def.worldLogin(Class9.Username, Class9.Password);
 	}
 
 	static int method1386(Class413 class413_0) {

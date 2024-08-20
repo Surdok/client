@@ -8,7 +8,7 @@ public class QuickchatCategoryLoader {
 		else if (Class9.anInt76 != -1)
 			Class279.method4964();
 		else
-			MaterialProp35.lobbyLogin(Class9.aString99, Class9.aString102);
+			MaterialProp35.lobbyLogin(Class9.Username, Class9.Password);
 	}
 	public static void method5923(PathingEntity animable, int[] animationIds, int[] ints_2, int[] ints_3) {
 		for (int i_5 = 0; i_5 < animationIds.length; i_5++) {

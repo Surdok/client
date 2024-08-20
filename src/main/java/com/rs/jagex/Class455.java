@@ -110,10 +110,10 @@ public abstract class Class455 {
 		if (!bool_1)
 			Class9.anInt76 = -1;
 		Class9.aBool74 = bool_1;
-		Class9.aString99 = string_2;
-		Class9.aString102 = string_3;
+		Class9.Username = string_2;
+		Class9.Password = string_3;
 		Class9.aLong77 = long_4;
-		if (Class9.aBool74 || !Class9.aString99.isEmpty() && !Class9.aString102.isEmpty()) {
+		if (Class9.aBool74 || !Class9.Username.isEmpty() && !Class9.Password.isEmpty()) {
 			if (Login.getLobbyStage() != LobbyStage.LOGGING_IN_LOBBY) {
 				Class9.anInt103 = 0;
 				Class9.anInt112 = -1;

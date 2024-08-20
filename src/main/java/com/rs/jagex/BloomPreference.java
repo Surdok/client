@@ -5,8 +5,8 @@ public class BloomPreference extends Preference {
 	static int anInt7899;
 
 	static void method12708() {
-		Class9.aString102 = "";
-		Class9.aString99 = "";
+		Class9.Password = "";
+		Class9.Username = "";
 	}
 
 	public static void method12710(int i_0) {

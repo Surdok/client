@@ -5,8 +5,8 @@ public class Class2 {
 	public static void method257(String string_0, String string_1) {
 		if (string_0.length() <= 320 && Class388.method6693()) {
 			HeadbarIndexLoader.method5118();
-			Class9.aString99 = string_0;
-			Class9.aString102 = string_1;
+			Class9.Username = string_0;
+			Class9.Password = string_1;
 			GameState.setGameState(GameState.UNK_19);
 		}
 	}

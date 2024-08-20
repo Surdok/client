@@ -259,7 +259,7 @@ public class Login {
 							i_6 = rsBB.index;
 							rsBB.writeByte(Class9.aLong77 == -1L ? 1 : 0);
 							if (Class9.aLong77 == -1L)
-								rsBB.writeString(Class9.aString99);
+								rsBB.writeString(Class9.Username);
 							else
 								rsBB.writeLong(Class9.aLong77);
 						}
@@ -310,7 +310,7 @@ public class Login {
 							i_6 = rsBB.index;
 							rsBB.writeByte(Class9.aLong77 == -1L ? 1 : 0);
 							if (Class9.aLong77 == -1L)
-								rsBB.writeString(Class9.aString99);
+								rsBB.writeString(Class9.Username);
 							else
 								rsBB.writeLong(Class9.aLong77);
 						}
