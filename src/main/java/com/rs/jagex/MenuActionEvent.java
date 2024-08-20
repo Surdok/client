@@ -16,12 +16,12 @@ public class MenuActionEvent extends CacheableNode {
 	long aLong9580;
 	boolean aBool9586;
 
-	MenuActionEvent(String string_1, String string_2, int i_3, MenuAction i_4, int i_5, long long_6, int i_8, int i_9, boolean bool_10, boolean bool_11, long long_12, boolean bool_14) {
+	MenuActionEvent(String ActionName, String string_2, int i_3, MenuAction i_4, int ItemID, long long_6, int i_8, int i_9, boolean bool_10, boolean bool_11, long long_12, boolean bool_14) {
 		aString9588 = string_2;
-		actionName = string_1;
+		actionName = ActionName;
 		anInt9578 = i_3;
 		menuAction = i_4;
-		itemId = i_5;
+		itemId = ItemID;
 		aLong9584 = long_6;
 		anInt9581 = i_8;
 		anInt9582 = i_9;
